@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word Selection Extension Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .word-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .word-item {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-color: #333;
+      border-radius: 4px;
+      margin-bottom: 5px;
+    }
+    .word-box {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+    }
+    .word-text {
+      cursor: pointer;
+    }
+    .delete-button {
+      cursor: pointer;
+      color: #ff5252;
+      font-weight: bold;
+      margin-right: 10px;
+      border: 1px solid #ff5252;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    .delete-box {
+      display: flex;
+      align-items: center;
+    }
+    .undo-redo-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .undo-button,
+    .redo-button {
+      padding: 8px 16px;
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .delete-all-button {
+      padding: 8px 16px;
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Saved Words</h1>
+  <div class="toolbar">
+    <button id="deleteAllButton" class="delete-all-button">Delete All</button>
+    <div class="undo-redo-buttons">
+      <button id="undoButton" class="undo-button" disabled>Undo</button>
+      <button id="redoButton" class="redo-button" disabled>Redo</button>
+    </div>
+  </div>
+  <ul id="wordList" class="word-list"></ul>
+  <script src="options.js"></script>
+</body>
+</html>
